@@ -1,5 +1,7 @@
 # 在线考试系统
 
+csdn博客https://blog.csdn.net/Leon_Theprofessional/article/details/90750313
+
 项目后台采用SSM框架整合，数据库版本是mysql5.1.37,使用maven管理jar包，以及对jdbc文件配置的账号密码进行了加密处理。前台页面使用的是jsp，使用jstl标签进行数据处理。目前实现功能：
   1.登录注册
   2.学生做题：
