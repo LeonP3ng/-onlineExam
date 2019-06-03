@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-public class LoginFilter implements Filter {
+public class TeacherFilter implements Filter {
     public void destroy() {
     }
 
@@ -20,8 +20,8 @@ public class LoginFilter implements Filter {
         response.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=UTF-8");
         HttpSession session=request.getSession();
-        Student student =(Student)session.getAttribute("student");
-        if(student ==null){
+        Teacher teacher=(Teacher)session.getAttribute("teacher");
+        if(teacher ==null){
             try{
                 String message="您无权操作,请登录";
                 String jsonMessage="";

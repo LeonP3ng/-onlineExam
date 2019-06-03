@@ -21,7 +21,7 @@ public class StudentController {
     @Autowired
     SubjectServiceInterface subjectServiceInterface;
     /*
-     * 3.学生后台管理逻辑
+     * 学生后台管理逻辑
      * */
     @RequestMapping("/exam")
     public String exam(@RequestParam(value="pn",defaultValue="1")int num , HttpSession session) {

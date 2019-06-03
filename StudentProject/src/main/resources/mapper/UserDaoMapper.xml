@@ -6,7 +6,7 @@
 	select * from tb_teacher where teacherId=#{teacherId}
 	</select>
 
-    <select id="findStudentByStudentId" resultType="com.wantao.bean.Student">
+    <select id="findStudentByStudentId" resultType="com.lp.entity.Student">
 	select * from tb_student where studentId=#{studentId}
 	</select>
 

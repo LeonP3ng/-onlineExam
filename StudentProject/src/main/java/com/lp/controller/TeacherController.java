@@ -25,7 +25,6 @@ public class TeacherController {
     StudentServiceInterface studentDaoImpl;
     @Autowired
     SubjectServiceInterface subjectServiceInterface;
-
     @Autowired
     UserServiceInterface userServiceInterface;
     @Autowired
@@ -33,7 +32,7 @@ public class TeacherController {
 
 
     /*
-     * 2.老师后台管理逻辑
+     * 老师后台管理逻辑
      * */
 
     @RequestMapping("/addSubject")
@@ -41,7 +40,6 @@ public class TeacherController {
         session.setAttribute("url","/addSubject");
         subjectServiceInterface.addSubject(subject);
         return "redirect:success.jsp";
-
     }
     @RequestMapping("/controlSubject")
     public String controlSubject(@RequestParam(value="pn",defaultValue="1") Integer pn, HttpSession session) {

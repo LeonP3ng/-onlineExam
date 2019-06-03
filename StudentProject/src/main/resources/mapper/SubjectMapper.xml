@@ -6,11 +6,11 @@
 		values(#{subjectTitle},#{subjectOptionA},#{subjectOptionB},#{subjectOptionC},#{subjectOptionD},#{subjectAnswer},#{subjectParse})
 	</insert>
 
-	<select id="findAllSubject" resultType="com.wantao.bean.Subject">
+	<select id="findAllSubject" resultType="com.lp.entity.Subject">
 		select * from tb_subject
 	</select>
 
-	<select id="findSubjectById" resultType="com.wantao.bean.Subject">
+	<select id="findSubjectById" resultType="com.lp.entity.Subject">
 	select * from tb_subject where subjectId=#{subjectId}
 	</select>
 
@@ -18,11 +18,11 @@
 	select subjectId from tb_subject;
 	</select>
 
-	<select id="findSubjectBySubjectTitle" resultType="com.wantao.bean.Subject">
+	<select id="findSubjectBySubjectTitle" resultType="com.lp.entity.Subject">
 	select * from tb_subject where subjectTitle like concat ('%',#{subjectTitle},'%')
 	</select>
 
-	<select id="randomFindSubject" resultType="com.wantao.bean.Subject">
+	<select id="randomFindSubject" resultType="com.lp.entity.Subject">
 	select * from tb_subject order by rand() limit 20
 	</select>
 
