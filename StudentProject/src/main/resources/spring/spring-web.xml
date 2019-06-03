@@ -18,8 +18,8 @@
 	<!-- 3.定义视图解析器 -->
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/WEB-INF/html/"></property>
-		<property name="suffix" value=".html"></property>
+		<property name="prefix" value="/"></property>
+		<property name="suffix" value=".jsp"></property>
 	</bean>
 	<!-- 文件上传解析器 -->
 	<bean id="multipartResolver"
@@ -32,31 +32,7 @@
 
 	<!-- 4.扫描web相关的bean -->
 	<context:component-scan base-package="com.lp.controller" />
-	<!-- 5.权限拦截器 -->
-	<!--<mvc:interceptors>-->
-		<!--&lt;!&ndash; 校验是否已登录了店家管理系统的拦截器 &ndash;&gt;-->
-		<!--<mvc:interceptor>-->
-			<!--<mvc:mapping path="/shopadmin/**" />-->
-			<!--<bean id="ShopInterceptor"-->
-				<!--class="com.imooc.o2o.interceptor.shopadmin.ShopLoginInterceptor" />-->
-		<!--</mvc:interceptor>-->
-		<!--&lt;!&ndash; 校验是否对该店铺有操作权限的拦截器 &ndash;&gt;-->
-		<!--<mvc:interceptor>-->
-			<!--<mvc:mapping path="/shopadmin/**" />-->
-			<!--&lt;!&ndash; shoplist page &ndash;&gt;-->
-			<!--<mvc:exclude-mapping path="/shopadmin/shoplist" />-->
-			<!--<mvc:exclude-mapping path="/shopadmin/getshoplist" />-->
-			<!--&lt;!&ndash; shopregister page &ndash;&gt;-->
-			<!--<mvc:exclude-mapping path="/shopadmin/getshopinitinfo" />-->
-			<!--<mvc:exclude-mapping path="/shopadmin/registershop" />-->
-			<!--<mvc:exclude-mapping path="/shopadmin/shopoperation" />-->
-			<!--&lt;!&ndash; shopmanage page &ndash;&gt;-->
-			<!--<mvc:exclude-mapping path="/shopadmin/shopmanagement" />-->
-			<!--<mvc:exclude-mapping path="/shopadmin/getshopmanagementinfo" />-->
-			<!--<bean id="ShopPermissionInterceptor"-->
-				<!--class="com.imooc.o2o.interceptor.shopadmin.ShopPermissionInterceptor" />-->
-		<!--</mvc:interceptor>-->
-	<!--</mvc:interceptors>-->
+
 	<mvc:annotation-driven>
 		<mvc:message-converters>
 			<bean class="org.springframework.http.converter.StringHttpMessageConverter">
@@ -68,25 +44,5 @@
 			</bean>
 		</mvc:message-converters>
 	</mvc:annotation-driven>
-
-	<!--&lt;!&ndash; spring和MyBatis完美整合，不需要mybatis的配置映射文件 &ndash;&gt;-->
-	<!--<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">-->
-		<!--<property name="dataSource" ref="dataSource"/>-->
-		<!--<property name="plugins">-->
-			<!--<array>-->
-				<!--<bean class="com.github.pagehelper.PageInterceptor">-->
-					<!--<property name="properties">-->
-						<!--&lt;!&ndash;使用下面的方式配置参数，一行配置一个 &ndash;&gt;-->
-						<!--<value>-->
-							<!--offsetAsPageNum=true-->
-							<!--rowBoundsWithCount=true-->
-							<!--pageSizeZero=true-->
-							<!--reasonable=true-->
-						<!--</value>-->
-					<!--</property>-->
-				<!--</bean>-->
-			<!--</array>-->
-		<!--</property>-->
-	<!--</bean>-->
 
 </beans>
