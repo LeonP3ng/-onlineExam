@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-@RequestMapping("/student")
+//@RequestMapping("/student")
 @Controller
 public class StudentController {
 
@@ -33,7 +33,7 @@ public class StudentController {
         }
         session.setAttribute("subjects",subjects);
         session.setAttribute("subjectIds", subjectIds);
-        return "redirect:exam.jsp";
+        return "exam";
     }
 
 
@@ -58,7 +58,7 @@ public class StudentController {
             }
         }
         session.setAttribute("score",score);
-        return "redirect:score.jsp";
+        return "score";
 
     }
 }

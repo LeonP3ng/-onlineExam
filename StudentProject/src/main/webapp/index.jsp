@@ -67,10 +67,12 @@
 
 				<div class="row">
 					<div class="col-lg-6 col-lg-offset-3">
-						<p class="copyright">Copyright © 2018 上海电机学院万涛</p>
+						<p class="copyright">Copyright © 2019 nenu liup</p>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
 </body>
+
 </html>

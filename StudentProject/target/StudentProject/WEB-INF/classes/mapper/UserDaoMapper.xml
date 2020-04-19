@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lp.dao.UserDaoInterface">
+    <select id="findTeacherById" resultType="com.lp.entity.Teacher">
+	select * from tb_teacher where teacherId=#{teacherId}
+	</select>
+
+    <select id="findStudentByStudentId" resultType="com.lp.entity.Student">
+	select * from tb_student where studentId=#{studentId}
+	</select>
+
+	<select id="addStudent" resultType="com.lp.entity.Student">
+	insert into tb_student(studentId,studentName,password,sclass) values(#{studentId},#{studentName},#{password},#{sclass})
+	</select>
+
+</mapper>

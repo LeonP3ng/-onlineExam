@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-@RequestMapping("/teacher")
+//@RequestMapping("/teacher")
 public class TeacherController {
     @Autowired
     StudentServiceInterface studentDaoImpl;

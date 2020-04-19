@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?> <!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lp.dao.StudentDaoInterface"><!--面向接口编程命名空间为接口全类名  -->
+
+	<select id="findAllStudent" resultType="com.lp.entity.Student">
+	select * from tb_student
+	</select>
+	<select id="findAllStudentId" resultType="java.lang.String">
+	select studentId from tb_student
+	</select>
+	<update id="updateStudent">
+	update tb_student set studentName=#{studentName},password=#{password},score=#{score},sclass=#{sclass} where studentId=#{studentId}
+	</update>
+	<delete id="deleteStudent">
+	delete from tb_student where studentId=#{studentId}
+	</delete>
+</mapper>
